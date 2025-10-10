@@ -1,0 +1,1 @@
+The provided code adds the same number again and again, basically making a multiplication function that uses recursion instead of traditional mulitplicaton methods.
