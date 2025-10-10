@@ -24,6 +24,8 @@ int main() {
     }
 
     //iterate through subarrays of every length, starting at one and moving to the max length
+    int maxSum = 0;
+
     for (int length = 1; length <= vec.size(); length++) {
         cout << "Subarrays of length " << length << ":\n";
         for (int start = 0; start <= vec.size() - length; start++) {
@@ -36,6 +38,9 @@ int main() {
                     cout << ", ";
             }
             cout << "] Sum: " << sum << "\n";
+            if (sum > maxSum) maxSum = sum;
         }
     }
+
+    cout << "Largest maximum sum of all subarrays: " << maxSum << endl;
 }
