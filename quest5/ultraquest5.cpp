@@ -8,7 +8,7 @@ int main() {
     int input;
 
     while (true) {
-        cout << "Enter an integer (or 'q' to quit): ";
+        cout << "enter an int or q to quit: ";
         cin >> input;
 
         if (cin.fail()) {
@@ -16,7 +16,7 @@ int main() {
             string exitLoop;
             cin >> exitLoop;
             if (exitLoop == "q") break; // quit if user enters 'q'
-            cout << "Invalid input. Please enter an integer.\n";
+            cout << "invalid, please enter an integer.\n";
             continue;
         }
 
