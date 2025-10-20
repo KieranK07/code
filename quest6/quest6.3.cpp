@@ -4,7 +4,7 @@ using namespace std;
 
 class Polynomial {
 private:
-    vector<double> coeffs; // coeffs[i] = coefficient for x^i
+    vector<double> coeffs;
 
 public:
     // constructor with degree input
@@ -17,6 +17,7 @@ public:
 
     // add two polynomials
     Polynomial add(const Polynomial& other) const {
+        // get the maximum degree of both
         int maxDegree = max(coeffs.size(), other.coeffs.size());
         Polynomial result(0);
         result.coeffs.assign(maxDegree, 0.0);
@@ -43,7 +44,7 @@ public:
         return result;
     }
 
-    // print polynomial (highest degree to lowest)
+    // print polynomial
     void print() const {
         for (int i = coeffs.size() - 1; i >= 0; --i) {
             if (coeffs[i] >= 0 && i != coeffs.size() - 1)
