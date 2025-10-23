@@ -6,7 +6,7 @@
 using namespace std;
 
 void clear() {
-    cout << "\033[2J\033[1;1H"; // clear screen
+    cout << "\033[2J\033[1;1H"; // clear screen source: google
 }
 
 int main() {
