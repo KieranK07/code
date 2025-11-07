@@ -28,13 +28,14 @@ int main() {
 
         Node* newNode = new Node{value, nullptr, nullptr};
 
-        if (!head)
+        if (!head) {
             head = newNode;
-        else
+            tail = newNode;
+        } else {
             tail->next = newNode;
             newNode->prev = tail;
-
-        tail = newNode;
+            tail = newNode;
+        }
     }
 
     cout << "\nDoubly linked list contents:\n";
