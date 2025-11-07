@@ -49,7 +49,6 @@ int main() {
     int num, val;
     cout << "Enter the location to insert a new node: ";
     cin >> num;
-    num = num - 1; // Convert to 0-based index
     cout << "Enter the value for the new node: ";
     cin >> val;
     Node* newNode = new Node{val, nullptr, nullptr};
