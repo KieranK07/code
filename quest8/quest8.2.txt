@@ -1,0 +1,2 @@
+For the syntax "class derivedClass : baseClass { … }", the default for inheritance is private.
+This means that all public and private members of the original class become private members of the derived class.
