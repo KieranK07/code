@@ -14,32 +14,18 @@ struct Node {
 //hard coded tree, read left to right from top to bottom
 vector<int> values = {30,20,15,100,50,71,17,2,4,47,46,23,7,1,5};
 
-//create the tree from the hard coded values
-Node* testTree() {
-    Node* root = new Node(values[0]);
-    root->left = new Node(values[1]);
-    root->right = new Node(values[2]);
-
-    root->left->left = new Node(values[3]);
-    root->left->right = new Node(values[4]);
-
-    root->right->left = new Node(values[5]);
-    root->right->right = new Node(values[6]);
-
-    root->left->left->left = new Node(values[7]);
-    root->left->left->right = new Node(values[8]);
-
-    root->left->right->left = new Node(values[9]);
-    root->left->right->right = new Node(values[10]);
-
-    root->right->left->left = new Node(values[11]);
-    root->right->left->right = new Node(values[12]);
-
-    root->left->left->left->left = new Node(values[13]);
-    root->left->left->left->right = new Node(values[14]);
-
-    return root;
+//create the tree from the hard coded values function
+// this function should create a balanced binary search tree using the values vector without manual insertion
+Node* buildTree(const vector<int>& vals, int start, int end) {
+    if (start > end) {
+        return nullptr;
+    }
+    // build from left to right, starting with the top node
+    //dont start with the middle value
+    
+    return node;
 }
+
 // search the tree function
 bool searchTree(Node* node, int target) {
     if (node == nullptr) {
@@ -72,7 +58,7 @@ void printTree(Node* node, int target, string prefix = "", bool isLeft = true) {
 }
 
 int main() {
-    Node* root = testTree();
+    Node* root = buildTree(values, 0, values.size() - 1);
     int target = 71;
 // if found in the tree
     if (searchTree(root, target)) {
